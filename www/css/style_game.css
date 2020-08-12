@@ -1,0 +1,369 @@
+/*縦画面*/
+.portrait_box{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  background-size:cover;
+  background-position:center center;
+  background-image:url("../images/back_portrait.png");
+}
+.portrait_boxA{
+  height:25%;
+}
+.portrait_boxB{
+  height:34%;
+  display:flex;
+}
+.portrait_boxC{
+  height:26%;
+  display:flex;
+}
+.portrait_boxD{
+  height:15%;
+  display:flex;
+  justify-content:flex-end;
+}
+.airplain{
+  width:100%;
+  height:auto;
+}
+
+/*横画面*/
+.landscape_box{
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  background-image: url("../images/back_landscape.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center center;
+}
+.box_top{
+  padding-top:20px;
+}
+.box_center{
+  display:flex;
+  margin-top: auto;
+  width:100%;
+  height:auto;
+}
+.landscape_boxA{
+  width:60%;
+  display:flex;
+}
+.box_bottom{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  width:100%;
+  height:12%;
+}
+.landscape_boxB{
+  width:40%;
+  display:flex;
+}
+
+
+/*共通*/
+.game_blackboard{
+  width: 95%;
+  height:auto;
+}
+.game_teacher{
+  width: 100%;
+  height:auto;
+}
+.game_paper{
+  width: 95%;
+  height:auto;
+  position: absolute;
+}
+.box_left{
+  width:35%;
+  display:flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.box_right{
+  width:65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+}
+.box_contens{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: flex-end;
+  position: relative;
+}
+.balloon {
+	position: absolute;
+  top: -70px;
+  left: 0.5vw;
+  padding:1vw;
+  background-color:#FFF;
+  color:black;
+  border:none;
+  animation-name: fadeout;
+  animation-duration:2s;
+  animation-timing-function:linear;
+  animation-delay:2s;
+  animation-fill-mode: both;
+}
+@keyframes fadeout {
+ 0% {
+		opacity :1;
+	}
+	100% {
+		opacity:0;
+	}
+}
+.balloon::before { /* 三角形を作成 */
+	content: "";
+  position: absolute;
+  top: 100%;
+  left: 13vw;
+  border: 0.4em solid transparent;
+  border-top: 1em solid #FFF;
+}
+.box_teacher{
+   width:100%;
+   height:auto;
+   position: relative;
+   text-align: center;  
+}
+.howto_close-circled{
+  color:white;
+  font-size:6vw;
+}
+
+/*正解モーダルウィンドウ*/
+.modal_corect{
+  animation: fadeIn 3s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+
+/*不正解モーダルウィンドウ*/
+.close_botton{
+  display: flex;
+  justify-content: flex-end;
+}
+.display_miss {
+  text-align: center;
+}
+.check_anser {
+  display: flex;
+  justify-content:center;
+  position: relative;
+}
+.miss_backcircle{
+  width: 100%;
+  height:100%;
+}
+.miss_yubimoji{
+  width: 100%;
+  height:auto;
+  position:absolute;
+}
+.commentary {
+   text-align: center;
+}
+.box_under{
+  height: 1vw;
+}
+
+/*使い方モーダルウィンドウ*/
+  .box_howto{
+  height:100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  }
+.display_howto{
+   height:100%;
+  width:100%; 
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+  }
+
+@media screen and (orientation: portrait) {
+  /* 縦 */
+  .lesson_btn{
+    width: 50vw;
+    height:auto;
+    margin-top: auto;
+  }
+  .hiragana{
+    font-size: 12vw;
+    font-weight: bold;
+  }
+  .animal{
+    width:100%;
+    height:100%;
+  }
+  .animal_box{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    height: 40%
+  }
+ .balloon_text {
+	  margin: 0;
+    padding: 0;
+    font-size: 4vw;
+ }
+.img_howto{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/howto_portrait.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position:center center;
+}
+  /*正解モーダルウィンドウ*/
+  .box_corect{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/corect_portrait.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center center;
+  }
+
+  /*不正解モーダルウィンドウ*/
+    .inner {
+    width: 70%;
+    height:auto;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    background-color: white;
+    transform:translate(20%,0%);
+  }
+  .zannen {
+    text-align: center;
+    line-height:0vw;
+    font-size:7vw;
+    color:red;
+    font-weight:bolder;
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  }
+  .close-circled{
+    font-size:10vw;
+    color: blue;
+  }
+  .yokumite {
+    line-height:0vw;
+    font-size:3vw;
+    color:black;
+  }
+  .moji{
+    color: #4f09f1;
+    font-weight:bolder;
+    line-height:0vw;
+    font-size:7vw;
+  }
+  .explain{
+    line-height:0vw;
+    font-size:4vw;
+    color: black;  
+  }
+}
+@media screen and (orientation: landscape) {
+  /* 横 */
+  .lesson_btn{
+    width:25vw;
+    height:auto;
+    margin-top: auto;
+  }
+  .hiragana{
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  .animal{
+    width:100%;
+    height:auto;
+  }
+  .animal_box{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+  }
+  .balloon_text {
+	  margin: 0;
+    padding: 0;
+    font-size: 2vw;
+}
+.img_howto{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/howto_landscape.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position:center center;
+}
+  /*正解モーダルウィンドウ*/
+  .box_corect{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/corect_landscape.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center center;
+  }
+
+  /*不正解モーダルウィンドウ*/
+  .inner {
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    width: 30%;
+    height:auto;
+    transform:translate(120%,0%);
+  }
+  .close-circled{
+    font-size:4vw;
+    color: blue;
+}
+  .zannen {
+    text-align: center;
+    line-height:0vw;
+    font-size:5vw;
+    color:red;
+    font-weight:bolder;
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  }
+  .yokumite {
+    line-height:0vw;
+    font-size:2vw;
+    color:black;
+  }
+  .moji{
+    color: #4f09f1;
+    font-weight:bolder;
+    line-height:0vw;
+    font-size:5vw;
+  }
+  .explain{
+    line-height:0vw;
+    font-size:2vw;
+    color: black;  
+  }
+}
+
+

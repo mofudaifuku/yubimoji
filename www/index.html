@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/hiragana.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style_top.css">
+  <link rel="stylesheet" href="css/style_game.css">
+  <link rel="stylesheet" href="css/style_lesson.css">  
+
+</head>
+<body>
+  <!-- メニューリスト -->  
+  <ons-splitter ng-controller="AppController as app" var="splitter">
+    <ons-splitter-side side="left" width="180px" collapse>
+      <ons-page>
+        <ons-list>
+          <ons-list-item expandable>あ
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(0)" tappable>あ</ons-list-item>
+              <ons-list-item ng-click="app.load(1)" tappable>い</ons-list-item>
+              <ons-list-item ng-click="app.load(2)" tappable>う</ons-list-item>
+              <ons-list-item ng-click="app.load(3)" tappable>え</ons-list-item>
+              <ons-list-item ng-click="app.load(4)" tappable>お</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>か
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(5)" tappable>か</ons-list-item>
+              <ons-list-item ng-click="app.load(6)" tappable>き</ons-list-item>
+              <ons-list-item ng-click="app.load(7)" tappable>く</ons-list-item>
+              <ons-list-item ng-click="app.load(8)" tappable>け</ons-list-item>
+              <ons-list-item ng-click="app.load(9)" tappable>こ</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>さ
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(10)" tappable>さ</ons-list-item>
+              <ons-list-item ng-click="app.load(11)" tappable>し</ons-list-item>
+              <ons-list-item ng-click="app.load(12)" tappable>す</ons-list-item>
+              <ons-list-item ng-click="app.load(13)" tappable>せ</ons-list-item>
+              <ons-list-item ng-click="app.load(14)" tappable>そ</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>た
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(15)" tappable>た</ons-list-item>
+              <ons-list-item ng-click="app.load(16)" tappable>ち</ons-list-item>
+              <ons-list-item ng-click="app.load(17)" tappable>つ</ons-list-item>
+              <ons-list-item ng-click="app.load(18)" tappable>て</ons-list-item>
+              <ons-list-item ng-click="app.load(19)" tappable>と</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>な
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(20)" tappable>な</ons-list-item>
+              <ons-list-item ng-click="app.load(21)" tappable>に</ons-list-item>
+              <ons-list-item ng-click="app.load(22)" tappable>ぬ</ons-list-item>
+              <ons-list-item ng-click="app.load(23)" tappable>ね</ons-list-item>
+              <ons-list-item ng-click="app.load(24)" tappable>の</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>は
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(25)" tappable>は</ons-list-item>
+              <ons-list-item ng-click="app.load(26)" tappable>ひ</ons-list-item>
+              <ons-list-item ng-click="app.load(27)" tappable>ふ</ons-list-item>
+              <ons-list-item ng-click="app.load(28)" tappable>へ</ons-list-item>
+              <ons-list-item ng-click="app.load(29)" tappable>ほ</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>ま
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(30)" tappable>ま</ons-list-item>
+              <ons-list-item ng-click="app.load(31)" tappable>み</ons-list-item>
+              <ons-list-item ng-click="app.load(32)" tappable>む</ons-list-item>
+              <ons-list-item ng-click="app.load(33)" tappable>め</ons-list-item>
+              <ons-list-item ng-click="app.load(34)" tappable>も</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>や
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(35)" tappable>や</ons-list-item>
+              <ons-list-item ng-click="app.load(36)" tappable>ゆ</ons-list-item>
+              <ons-list-item ng-click="app.load(37)" tappable>よ</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>ら
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(38)" tappable>ら</ons-list-item>
+              <ons-list-item ng-click="app.load(39)" tappable>り</ons-list-item>
+              <ons-list-item ng-click="app.load(40)" tappable>る</ons-list-item>
+              <ons-list-item ng-click="app.load(41)" tappable>れ</ons-list-item>
+              <ons-list-item ng-click="app.load(42)" tappable>ろ</ons-list-item>
+            </div>
+          </ons-list-item>
+          <ons-list-item expandable>わ
+            <div class="expandable-content">
+              <ons-list-item ng-click="app.load(43)" tappable>わ</ons-list-item>
+              <ons-list-item ng-click="app.load(44)" tappable>を</ons-list-item>
+              <ons-list-item ng-click="app.load(45)" tappable>ん</ons-list-item>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content page="id_top.html"></ons-splitter-content>
+  </ons-splitter>
+<!-- トップ画面 -->
+<ons-template id="id_top.html">
+  <ons-navigator id="myNavigator" page="top.html"></ons-navigator>
+</ons-template>
+<!-- レッスン画面 -->
+<ons-template id="lesson.html">
+  <ons-page>
+  <div class="lesson">      
+    <div class="bar-button">
+      <ons-toolbar-button ng-click="app.toggle()">
+        <ons-icon icon="md-menu" class="lessom_menu"></ons-icon>
+      </ons-toolbar-button>
+  </div>
+  <div class="lesson_frame">
+    <div class="frame1">
+        <div class="left_frame">
+          <ons-icon class="back_btn" icon="fa-angle-double-left" size="15vw" style="color: blue" ng-click="app.back_page()"></ons-icon>
+        </div>
+        <div class="cener_frame">
+          <img class="lesson_blackboard" src="images/backcircle.png">
+          <img class="lesson_yubimoji" ng-src="{{yubimoji}}">
+        </div>
+        <div class="right_frame">  
+          <ons-icon class="next_btn" icon="fa-angle-double-right" size="15vw" style="color: blue" ng-click="app.next_page()"></ons-icon>
+        </div>
+      </div>
+      <div class="frame2">
+        <p class="lesson_moji">{{lesson_moji}}</p>
+        <p class="lesson_explain">{{lesson_explain}}</p>
+      </div>
+  </div>
+  <div class="frame3" ng-click="app.gamebtn()">
+        <img class="game_btn" src="images/gamebtn.png">
+      </div>
+  </div>
+</ons-page>
+</ons-template>
+</body>
+</html>

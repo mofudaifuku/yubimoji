@@ -1,0 +1,143 @@
+<ons-page  ng-controller="gameController as game">
+   <!-- 縦向き -->
+  <div class="portrait_box" ons-if-orientation="portrait">
+    <div class="portrait_boxA">
+      <img class="airplain" ng-src="{{image_airplain}}">
+    </div>
+    <!-- boxB 上段 -->
+    <div class="portrait_boxB">
+      <!-- boxB 左 先生 -->
+      <div class="box_left">
+        <div class="box_teacher">
+          <img class="game_teacher" ng-src="{{image_teacher}}" ng-click="game.howto_show()">
+          <!-- ふきだし -->
+          <div class="balloon">
+		        <p class="balloon_text">{{comment}}</p>
+          </div>
+        </div>
+      </div>
+      <!-- boxB 右 黒板 -->
+      <div class="box_right">
+        <img class="game_blackboard" ng-src="{{image_blackboard}}">
+        <img class="game_paper" ng-src="{{image_paper}}">
+      </div>     
+    </div>
+    <!-- boxC 中段 -->
+    <div class="portrait_boxC">
+      <!-- boxC 左 -->
+      <div class="box_contens" ng-click="game.gameStart1()">
+        <img class="animal" ng-src="{{image1}}">
+        <div class="animal_box">
+          <span class="hiragana">{{hiragana1}}</span>
+        </div>
+      </div>
+      <!-- boxC 中 -->
+      <div class="box_contens" ng-click="game.gameStart2()">
+        <img class="animal" ng-src="{{image2}}">
+        <div class="animal_box">
+          <span class="hiragana">{{hiragana2}}</span>
+        </div>
+      </div>
+      <!-- boxC 右 -->
+      <div class="box_contens" ng-click="game.gameStart3()">
+        <img class="animal" ng-src="{{image3}}">
+        <div class="animal_box">
+          <span class="hiragana">{{hiragana3}}</spanp>
+        </div>         
+      </div>
+    </div>
+    <!-- boxD -->
+    <div class="portrait_boxD" ng-click="game.lessonbtn()">
+      <img src="images/lessonbtn.png" class="lesson_btn">
+    </div>
+  </div>
+    <!-- 縦向き -->
+  <div class="landscape_box" ons-if-orientation="landscape">
+    <!-- box 上段 -->
+    <div class="box_top"></div>
+    <div class="box_center"> 
+      <!-- boxA -->
+      <div class="landscape_boxA">
+        <!-- box 左 先生 -->
+        <div class="box_left">
+          <div class="box_teacher">
+            <img class="game_teacher" ng-src="{{image_teacher}}" ng-click="game.howto_show()">
+            <!-- ふきだし -->
+            <div class="balloon">
+		          <p class="balloon_text">{{comment}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- box 右 黒板 -->
+        <div class="box_right">
+          <img class="game_blackboard" ng-src="{{image_blackboard}}">
+          <img class="game_paper" ng-src="{{image_paper}}">
+        </div>
+      </div>
+      <!-- boxB -->
+      <div class="landscape_boxB">
+        <!-- box 左 -->
+        <div class="box_contens" ng-click="game.gameStart1()">
+          <img class="animal" ng-src="{{image1}}">
+          <div class="animal_box">
+            <span class="hiragana">{{hiragana1}}</spanp>
+          </div>
+        </div>
+        <!-- box 中 -->
+        <div class="box_contens" ng-click="game.gameStart2()">
+          <img class="animal" ng-src="{{image2}}">
+          <div class="animal_box">
+            <span class="hiragana">{{hiragana2}}</spanp>
+          </div>
+        </div>
+        <!-- box 右 -->
+        <div class="box_contens" ng-click="game.gameStart3()">
+          <img class="animal" ng-src="{{image3}}">
+          <div class="animal_box">
+            <span class="hiragana">{{hiragana3}}</spanp>
+          </div>         
+        </div>
+      </div>
+  </div>
+  <!-- box 下段 -->
+  <div class="box_bottom"  ng-click="game.lessonbtn()">
+    <img src="images/lessonbtn.png" class="lesson_btn">
+  </div>
+</div>
+<!-- モーダルウィンドウ(使い方説明) -->
+<ons-modal var="howto_modal" class="modal_howto">
+  <div class="box_howto" ng-click="game.howto_close()">
+    <div class="close_botton">
+    <ons-icon icon="ion-close-circled" class="howto_close-circled"></ons-icon>
+    </div>
+    <div class="display_howto">
+    <div class="img_howto"></div>
+    </div>
+  </div>
+</ons-modal>
+<!-- モーダルウィンドウ(あたり) -->
+<ons-modal var="corect_modal" class="modal_corect">
+  <div class="box_corect"></div>
+</ons-modal>
+<!-- モーダルウィンドウ(はずれ) -->
+<ons-modal var="miss_modal">
+<div class="inner" ng-click="game.btn_close()">
+  <div class="close_botton">
+    <ons-icon icon="ion-close-circled" class="close-circled"></ons-icon>
+    </div>
+  <div class="display_miss">
+      <p class="zannen">ざんねん!</p>
+      <p class="yokumite">よくみておぼえてね</p>
+      </div>
+   <div class="check_anser">
+        <img src="images/backcircle.png" class="miss_backcircle">
+        <img class="miss_yubimoji" ng-src="{{yubimoji}}">
+        </div>
+      <div class="commentary">
+        <p class="moji">{{moji}}</p>
+        <p class="explain">{{explain}}</p>
+       </div>
+       <div class="box_under"></div>
+       </div>
+</ons-modal>
+</ons-page>

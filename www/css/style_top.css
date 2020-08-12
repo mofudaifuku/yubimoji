@@ -1,0 +1,99 @@
+@keyframes key1{
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-40px);}
+}
+
+.top_box{
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color:#FF3333; 
+}
+
+.top_box2{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  animation: key1 .3s ease 4 alternate; 
+}
+.title{
+  width:90%;
+  height:auto;
+}
+.img_title{
+  width:100%;
+  height:auto;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.top_box3{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.top_btn{
+  width:90%;
+  height:90%;
+}
+.top_box4{
+  padding-top:5px;
+  width:100%; 
+}
+.top_box5{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-fill-mode: both; 
+}
+.top_box6{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  color: white; 
+}
+
+@media screen and (orientation: portrait) {
+.top_box1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+.Cmark{
+width:80%;
+height:80%;
+}
+}
+@media screen and (orientation: landscape) {
+.top_box1{
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.Cmark{
+width:45%;
+height:50%;
+}
+}
+/*div{border-style: solid;}*/
+
+
+
+
+

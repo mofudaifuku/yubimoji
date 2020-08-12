@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+}
+
+.lesson{
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  background-color:whitesmoke; 
+}
+.bar-button{
+  text-align: left;
+}
+.lesson_frame{
+  width: 100%;
+  height:auto;
+  flex-direction: column;
+  margin-top: auto;
+  
+}
+
+.frame1{
+  display: flex;
+}
+.left_frame{
+  margin-top: auto; 
+}
+.cener_frame{
+  display: flex;
+  justify-content:center;
+  position: relative;
+  width: 100%;
+  height:auto;
+}
+.right_frame{
+  margin-top: auto; 
+}
+.frame2 {
+  text-align: center;
+  width: 100%;
+  height:auto;
+}
+.frame3{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  width: 100%;
+  height:auto;
+}
+@media screen and (orientation: portrait) {
+.lessom_menu{
+  font-size:10vw;
+  color: #4f09f1;
+}
+.lesson_moji{
+  color: #4f09f1;
+  font-weight:bolder;
+  line-height:0vw;
+  font-size:11vw;
+}
+.lesson_explain{
+  color: black;
+  line-height:0vw;
+  font-size:6vw; 
+}
+.lesson_blackboard{
+  width: 100%;
+  height:100%;
+}
+.lesson_yubimoji{
+  width: 100%;
+  position:absolute;
+  height:auto;
+}
+.game_btn{
+  width: 50vw;
+  height:auto;
+  margin-top: auto;
+}
+}
+@media screen and (orientation: landscape) {
+.lessom_menu{
+  font-size:4vw;
+  color: #4f09f1;
+}
+.lesson_moji{
+  color: #4f09f1;
+  margin: 0px 0px 0px 0px;
+  font-weight:bolder;
+  font-size:6vw;
+  }
+.lesson_explain{
+  color: black;
+  margin: 0px 0px 0px 0px;
+  line-height:0vw;
+  font-size:2vw;
+}
+.lesson_blackboard{
+  width:58%;
+  height:110%;
+}
+.lesson_yubimoji{
+  width:58%;
+  height:155%;
+  position:absolute;
+}
+.game_btn{
+  width: 25vw;
+  height:auto;
+  margin-top:auto;
+}
+}
